@@ -1,0 +1,86 @@
+
+<html>
+  <head>
+	<title>Teste Psicológico</title>
+  </head>
+  <body>
+	<h1>Teste Psicológico</h1>
+	<p>Por favor, responda às perguntas abaixo:</p>
+	<form>
+  	<p > Imagine que você está caminhando em uma floresta <p>
+  	<p>Como é a floresta?</p>
+  	<input type="radio" name="question1" value="escura">Uma floresta escura com pouca passagem dos raios de sol<br>
+  	<input type="radio" name="question1" value="clara">Uma floresta clara, com bastante raios de sol e um céu azul<br>
+  	<br>
+  	<p >Você continua caminhando na floresta, e de repente aparece um cachorro. </p>
+  	<p>O cachorro é manso?. </p>
+  	<input type="radio" name="question2" value="cachorro1"> Sim<br>
+  	<input type="radio" name="question2" value="cachorro2"> Não<br>
+   	<br>
+	<p >Você continua a caminhada na floresta e encontra um lindo jarro </p>
+    <p>Você levaria o jarro? </p>
+  	<input type="radio" name="question3" value="jarro1"> Sim<br>
+  	<input type="radio" name="question3" value="jarro2"> Não<br>
+   	<br>
+	<p >Seguindo a trilha, você se depara com um lago que te impede de continuar, para continuar tem que atravessar o lago. Como é o lago?<p>
+  	<input type="radio" name="question4" value="lago1"> Águas claras <br>
+  	<input type="radio" name="question4" value="lago2"> Águas escuras <br>
+   	<br>
+	<p>Após atravessar o lago, Você se depara com um muro muito grande de largura e comprimento </p>
+    <p>Você atravessa o muro? </p>
+  	<input type="radio" name="question5" value="muro1"> Sim<br>
+  	<input type="radio" name="question5" value="muro2"> Não<br>
+   	<br>
+
+  	<button type="button" onclick="showResult()">Mostrar Resultado</button>
+
+	</form>
+	<br>
+	<p id="result"></p>
+   <script>
+		function showResult() {
+    	var question1 = document.querySelector('input[name="question1"]:checked').value;
+    	var question2 = document.querySelector('input[name="question2"]:checked').value;
+     	var question3 = document.querySelector('input[name="question3"]:checked').value;
+     	var question4 = document.querySelector('input[name="question4"]:checked').value;
+     	var question5 = document.querySelector('input[name="question5"]:checked').value;
+    	var result = document.getElementById("result");
+    	if(question1 == escura){
+			result.innerHTML =  "Você enchergar a vida com tristeza"
+			} else{
+				result.innerHTML = "Você encherga a vida bem"
+			}
+		if (question2 == cachorro1){
+				result.innerHTML = "Você faz amizades com facilidade"
+			} else{ 
+				result.innerHTML = "Você tem dificuldade em fazer amizades"
+			}
+		if (question3 == jarro1 ) {
+			    result.innerHTML = "Você é apegado a bens materias"	
+			}else{ 
+				result.innerHTML = "Vocẽ não é apegada a bens materias"
+			}
+		if(question4 == lago1){
+				result.innerHTML = "Você é uma pessoa tranquila"
+			}else{
+				result.innerHTML = "Você é uma pessoa inquieta"
+			}
+		if(question5 == muro1){
+				result.innerHTML = "Você acredita em algo após a morte"
+		}
+			else {
+				result.innerHTML = "Você acredita que a morte é o ponto final"
+			}
+      	
+  	}
+
+  
+	</script>
+  </body>
+   
+</html>
+
+
+
+
+
